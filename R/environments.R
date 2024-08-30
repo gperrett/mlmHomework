@@ -1,5 +1,6 @@
 grade_env_hw1 <- new.env()
 grade_env_hw2 <- new.env()
 grade_env_hw3 <- new.env()
+grade_env_hw4 <- new.env()
 grade_env_hw5 <- new.env()
 grade_env_hw6 <- new.env()
