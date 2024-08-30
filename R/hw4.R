@@ -1,6 +1,6 @@
 #' @title Load data for homework 4
 #' @param netid a character string representing your NYU netid. Make sure to only use your netID!!
-#' @return the `schools` data.frame
+#' @return the `df` data.frame
 #' @export
 #'
 #' @examples
