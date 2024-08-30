@@ -4,7 +4,7 @@
 \alias{answer_hw3_1b}
 \title{submit answer to homework 3 question 1 part b}
 \usage{
-answer_hw3_1b(model0 = NULL, model1 = NULL, model2 = NULL)
+answer_hw3_1b(model0 = NULL, model1 = NULL, model2 = NULL, model3 = NULL)
 }
 \arguments{
 \item{model0}{a numeric answer. Do not worry about rounding but provide a minimum or 2 decimal places to all answers}
