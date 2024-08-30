@@ -12,7 +12,7 @@
 #'
 #' }
 #'
-generate_data_hw3 <- function(netid){
+generate_data_hw4 <- function(netid){
   #draw <- readRDS('data/draw.rds')
   id <- 1:200
   names(id)[1:2] <- c('gp77', 'ms184')
