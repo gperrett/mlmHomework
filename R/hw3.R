@@ -20,7 +20,20 @@ generate_data_hw3 <- function(netid){
   names(draw) <- names(id)
   Sys.setenv(seed = id[netid])
   set.seed(as.numeric(Sys.getenv('seed')))
-  schools <<- draw[[netid]]
+  N <- sample(80:100, 1) # schools
+  M <- sample(85:105, 1) # students per school
+  id <- rep(1:N, each=M) #the school identifier
+
+  eps <- rnorm(N*M, mean=0, sd=1 ) #individual (level 1 errors)
+  SES <- rnorm(N*M, mean=0, sd=1 ) #everyone has an SES.
+  zeta0 <- rnorm(N, mean=0, sd=1 ) #school level intercepts
+
+  #use the mean term in the next line to make zeta1 negatively correlated with zeta0
+  zeta1 <- rnorm(N, mean=-1*zeta0, sd=sqrt(2) ) #school level random effect for slope in SES
+  Beta_SES <- 2 #effect for SES, on average
+  # write outcome based on DGP
+  Y <- 0 + zeta0[id] + (zeta1[id] + Beta_SES)*SES + eps
+  df <<- data.frame(Y=Y,SES=SES,id=id)
 
 }
 
