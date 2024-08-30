@@ -56,7 +56,7 @@ generate_data_hw3 <- function(netid){
 #' }
 #'
 
-answer_hw3_1a <- function(model0 = NULL, model1 = NULL, model2 = NULL){
+answer_hw3_1a <- function(model0 = NULL, model1 = NULL, model2 = NULL, model3 = NULL){
 
   if(any(is.null(model0), is.null(model1), is.null(model2))){
     warning('Currently, you have not answered question 1 part b')
@@ -65,6 +65,7 @@ answer_hw3_1a <- function(model0 = NULL, model1 = NULL, model2 = NULL){
   grade_env_hw3$answer_1a_model0 <- model0
   grade_env_hw3$answer_1a_model1 <- model1
   grade_env_hw3$answer_1a_model2 <- model2
+  grade_env_hw3$answer_1a_model3 <- model3
 
 
 }
@@ -87,7 +88,7 @@ answer_hw3_1a <- function(model0 = NULL, model1 = NULL, model2 = NULL){
 #' }
 #'
 
-answer_hw3_1b <- function(model0 = NULL, model1 = NULL, model2 = NULL){
+answer_hw3_1b <- function(model0 = NULL, model1 = NULL, model2 = NULL, model3 = NULL){
 
   if(any(is.null(model0), is.null(model1), is.null(model2))){
     warning('Currently, you have not answered question 1 part b')
@@ -96,6 +97,7 @@ answer_hw3_1b <- function(model0 = NULL, model1 = NULL, model2 = NULL){
   grade_env_hw3$answer_1b_model0 <- model0
   grade_env_hw3$answer_1b_model1 <- model1
   grade_env_hw3$answer_1b_model2 <- model2
+  grade_env_hw3$answer_1b_model3 <- model3
 
 
 }
@@ -119,7 +121,7 @@ answer_hw3_1b <- function(model0 = NULL, model1 = NULL, model2 = NULL){
 #' }
 #'
 
-answer_hw3_1c <- function(model0 = NULL, model1 = NULL, model2 = NULL){
+answer_hw3_1c <- function(model0 = NULL, model1 = NULL, model2 = NULL, model3 = NULL){
 
   if(any(is.null(model0), is.null(model1), is.null(model2))){
     warning('Currently, you have not answered question 1 part b')
@@ -128,6 +130,7 @@ answer_hw3_1c <- function(model0 = NULL, model1 = NULL, model2 = NULL){
   grade_env_hw3$answer_1c_model0 <- model0
   grade_env_hw3$answer_1c_model1 <- model1
   grade_env_hw3$answer_1c_model2 <- model2
+  grade_env_hw3$answer_1c_model3 <- model3
 
 
 }
@@ -150,7 +153,7 @@ answer_hw3_1c <- function(model0 = NULL, model1 = NULL, model2 = NULL){
 #' }
 #'
 
-answer_hw3_2a <- function(model0 = NULL, model1 = NULL, model2 = NULL){
+answer_hw3_2a <- function(model0 = NULL, model1 = NULL, model2 = NULL, model3 = NULL){
 
   if(any(is.null(model0), is.null(model1), is.null(model2))){
     warning('Currently, you have not answered question 1 part b')
@@ -159,6 +162,7 @@ answer_hw3_2a <- function(model0 = NULL, model1 = NULL, model2 = NULL){
   grade_env_hw3$answer_2a_model0 <- model0
   grade_env_hw3$answer_2a_model1 <- model1
   grade_env_hw3$answer_2a_model2 <- model2
+  grade_env_hw3$answer_2a_model3 <- model3
 
 
 }
