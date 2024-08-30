@@ -33,6 +33,6 @@ generate_data_hw4 <- function(netid){
   Beta_SES <- 2 #effect for SES, on average
   # write outcome based on DGP
   Y <- 0 + zeta0[id] + (zeta1[id] + Beta_SES)*SES + eps
-  df <<- data.frame(Y=Y,SES=SES,id=id)
+  dat <<- data.frame(Y=Y,SES=SES,id=id)
 
 }
