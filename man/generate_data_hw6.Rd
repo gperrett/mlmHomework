@@ -2,7 +2,7 @@
 % Please edit documentation in R/hw6.R
 \name{generate_data_hw6}
 \alias{generate_data_hw6}
-\title{Load data for homework 2}
+\title{Load data for homework 6}
 \usage{
 generate_data_hw6(netid)
 }
@@ -13,7 +13,7 @@ generate_data_hw6(netid)
 the `schools` data.frame
 }
 \description{
-Load data for homework 2
+Load data for homework 6
 }
 \examples{
 \donttest{

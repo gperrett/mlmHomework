@@ -1,4 +1,4 @@
-#' @title Load data for homework 2
+#' @title Load data for homework 6
 #' @param netid a character string representing your NYU netid. Make sure to only use your netID!!
 #' @return the `schools` data.frame
 #' @export
@@ -17,7 +17,7 @@ generate_data_hw6 <- function(netid){
   id <- 1:200
   names(id)[1:2] <- c('gp77', 'ms184')
   names(id)[3:length(id)] <- 3:length(id)
-  names(draw) <- names(id)
+  names(draw6) <- names(id)
   Sys.setenv(seed = id[netid])
   set.seed(as.numeric(Sys.getenv('seed')))
   dat <<- draw6[[netid]]
