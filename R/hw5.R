@@ -254,35 +254,64 @@ answer_hw5_6 <- function(answer = NULL){
 }
 
 
-#' @title submit answer to homework 5 question 7
+#' @title submit answer to homework 5 question 7a
 #' @param answer a logical indicating TRUE or FALSE
-#' @return summary of your current answer for question 7
+#' @return summary of your current answer for question 7a
 #' @export
 #'
 #' @examples
 #' \donttest{
 #'
-#' # format answer to question 2:
-#' answer_hw5_7(answer = TRUE) # to indicate true
+#' # format answer to question 7a:
+#' answer_hw5_7a(answer = TRUE) # to indicate true
 #'
-#' answer_hw5_7(answer = FALSE) # to indicate false
+#' answer_hw5_7a(answer = FALSE) # to indicate false
 #'
 #'
 #' }
 #
-answer_hw5_7 <- function(answer = NULL){
+answer_hw5_7a <- function(answer = NULL){
   if(is.null(answer)){
     answer <- NULL
-    warning('Currently, you have not answered question 7')
+    warning('Currently, you have not answered question 7a')
   }
 
   if(is.character(answer)){
     answer <- as.logical(answer)
   }
 
-  grade_env_hw5$answer_7 <- answer
+  grade_env_hw5$answer_7a <- answer
 }
 
+
+#' @title submit answer to homework 5 question 7a
+#' @param answer a logical indicating TRUE or FALSE
+#' @return summary of your current answer for question 7a
+#' @export
+#'
+#' @examples
+#' \donttest{
+#'
+#' # format answer to question 7b:
+#' answer_hw5_7b(answer = TRUE) # to indicate true
+#'
+#' answer_hw5_7b(answer = FALSE) # to indicate false
+#'
+#'
+#' }
+#
+answer_hw5_7b <- function(answer = NULL){
+  if(is.null(answer)){
+    answer <- NULL
+    warning('Currently, you have not answered question 7a')
+  }
+
+  if(is.character(answer)){
+    answer <- as.logical(answer)
+  }
+
+  grade_env_hw5$answer_7b <- answer
+}
 
 
 
