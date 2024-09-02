@@ -68,7 +68,7 @@ answer_hw6_1 <- function(answer = NULL){
 answer_hw6_2 <- function(answer = NULL){
   if(is.null(answer)){
     answer <- NULL
-    warning('Currently, you have not answered question 1')
+    warning('Currently, you have not answered question 2')
   }
 
   grade_env_hw6$answer_2 <- answer
@@ -101,7 +101,7 @@ answer_hw6_3a <- function(answer = NULL){
 
   if(is.null(answer)){
     answer <- NULL
-    warning('Currently, you have not answered question 4')
+    warning('Currently, you have not answered question 3a')
   }
 
   grade_env_hw6$answer_3a <- answer
@@ -132,7 +132,7 @@ answer_hw6_3b <- function(answer = NULL){
 
   if(is.null(answer)){
     answer <- NULL
-    warning('Currently, you have not answered question 4')
+    warning('Currently, you have not answered question 3b')
   }
 
   grade_env_hw5$answer_3b <- answer
@@ -158,7 +158,7 @@ answer_hw6_3b <- function(answer = NULL){
 answer_hw6_4 <- function(answer = NULL){
   if(is.null(answer)){
     answer <- NULL
-    warning('Currently, you have not answered question 7')
+    warning('Currently, you have not answered question 4')
   }
 
   if(is.character(answer)){
@@ -168,6 +168,89 @@ answer_hw6_4 <- function(answer = NULL){
   grade_env_hw6$answer_4 <- answer
 }
 
+
+#' @title submit answer to homework 6 question 5a
+#' @param answer a numeric answer. Do not worry about rounding but provide a minimum or 2 decimal places to all answers
+#' @return summary of your current answer for question 5a
+#' @export
+#'
+#' @examples
+#' \donttest{
+#'
+#' # format answer to question 5a:
+#' answer_hw6_5a(answer = .2239)
+#'
+#' answer_hw6_5a(answer = .5483)
+#'
+#' }
+#'
+answer_hw6_5a <- function(answer = NULL){
+  if(is.null(answer)){
+    answer <- NULL
+    warning('Currently, you have not answered question 5a')
+  }
+
+  grade_env_hw6$answer_5a <- answer
+}
+
+
+#' @title submit answer to homework 6 question 5b
+#' @param answer a logical indicating TRUE or FALSE
+#' @return summary of your current answer for question 5b
+#' @export
+#'
+#' @examples
+#' \donttest{
+#'
+#' # format answer to question 5b:
+#' answer_hw6_5b(answer = TRUE) # to indicate true
+#'
+#' answer_hw6_5b(answer = FALSE) # to indicate false
+#'
+#'
+#' }
+#
+answer_hw6_5b <- function(answer = NULL){
+  if(is.null(answer)){
+    answer <- NULL
+    warning('Currently, you have not answered question 5b')
+  }
+
+  if(is.character(answer)){
+    answer <- as.logical(answer)
+  }
+
+  grade_env_hw6$answer_5b <- answer
+}
+
+#' @title submit answer to homework 6 question 5c
+#' @param answer a logical indicating TRUE or FALSE
+#' @return summary of your current answer for question 5c
+#' @export
+#'
+#' @examples
+#' \donttest{
+#'
+#' # format answer to question 5c:
+#' answer_hw6_5c(answer = TRUE) # to indicate true
+#'
+#' answer_hw6_5c(answer = FALSE) # to indicate false
+#'
+#'
+#' }
+#
+answer_hw6_5c <- function(answer = NULL){
+  if(is.null(answer)){
+    answer <- NULL
+    warning('Currently, you have not answered question 5c')
+  }
+
+  if(is.character(answer)){
+    answer <- as.logical(answer)
+  }
+
+  grade_env_hw6$answer_5c <- answer
+}
 
 #' @title submit answer to homework 6 question 6
 #' @param answer a logical indicating TRUE or FALSE
@@ -188,7 +271,7 @@ answer_hw6_4 <- function(answer = NULL){
 answer_hw6_6 <- function(answer = NULL){
   if(is.null(answer)){
     answer <- NULL
-    warning('Currently, you have not answered question 7')
+    warning('Currently, you have not answered question 6')
   }
 
   if(is.character(answer)){
