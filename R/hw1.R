@@ -69,7 +69,7 @@ question_hw1_3a <- function(){
 question_hw1_4a <- function(){
   set.seed(as.numeric(Sys.getenv('seed')))
   coef <- sample(x = c(1:20), size = 1)
-  cat(paste0('Using model3, report the expected difference between outcomes comparing a teacher with 0 and ', coef, ' years of teaching experience, all else equal'))
+  cat(paste0('Using model2, report the expected difference between outcomes comparing a teacher with 0 and ', coef, ' years of teaching experience, all else equal'))
 
 }
 
