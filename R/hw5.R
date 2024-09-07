@@ -24,7 +24,7 @@ generate_data_hw5 <- function(netid){
                       "ll1950", "cl6623", "sm11370", "ap8617", "bsp8894", "ap6355",
                       "cp4101", "xq661", "zq2253", "kr3235", "jds866", "ss17504", "rlt9272",
                       "at6099", "xt595", "vt2289", "cv985", "zw4183", "wy2391", "tz2569",
-                      "xz2661", "hz3533", "sz4548", "tz2683","bds9726","tt1014")
+                      "xz2661", "hz3533", "sz4548", "tz2683","bds9726","tt1014","nyimbs01")
   names(draw5) <- names(id)
   Sys.setenv(seed = id[netid])
   set.seed(as.numeric(Sys.getenv('seed')))
