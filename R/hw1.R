@@ -16,7 +16,7 @@ generate_data_hw1 <- function(netid){
   #draw <- readRDS('data/draw.rds')
   id <- 1:200
   names(id) <- as.character(1:length(id))
-  names(id)[1:60] <- c("gp77", "ms184", "zm2518", "msb7677", "uuc1", "sc5466", "ac11007",
+  names(id)[1:62] <- c("gp77", "ms184", "zm2518", "msb7677", "uuc1", "sc5466", "ac11007",
                       "sd5718", "yd2837", "emd14", "dld382", "sd5720", "kf1678", "mh7262",
                       "jeh596", "xh2729", "yh2741", "jh172", "rbj2158", "yk3008", "sk10896",
                       "yl7469", "alt10", "pl1900", "jl15426", "xl4820", "zl5566", "yl8844",
