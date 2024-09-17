@@ -1,7 +1,7 @@
 #' @title Load names for all generate data functions
 #' 
 
-nEnrolled <- 61
+nEnrolled <- 62
 nMax <- 200
 id <- 1:nMax
 names(id) <- as.character(1:length(id))
