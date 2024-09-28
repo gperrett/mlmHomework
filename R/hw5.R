@@ -14,7 +14,9 @@
 #'
 generate_data_hw5 <- function(netid){
   #draw <- readRDS('data/draw.rds')
-  #id is already available in globalEnv 
+  #id is already available in globalEnv
+  grade_env_hw5$netid <- netid #handy for assignment of grades
+  
   names(draw5) <- names(id)
   Sys.setenv(seed = id[netid])
   set.seed(as.numeric(Sys.getenv('seed')))
