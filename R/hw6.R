@@ -7,7 +7,7 @@
 #' \donttest{
 #'
 #' # run code to load your unique dataset
-#' generate_data_hw5(netid = 'gp77') # put net id in quotes
+#' generate_data_hw6(netid = 'gp77') # put net id in quotes
 #'
 #'
 #' }
@@ -15,6 +15,7 @@
 generate_data_hw6 <- function(netid){
   #draw <- readRDS('data/draw.rds')
   #id is already available in globalEnv 
+  grade_env_hw6$netid <- netid #handy for assignment of grades
   names(draw6) <- names(id)
   Sys.setenv(seed = id[netid])
   set.seed(as.numeric(Sys.getenv('seed')))
@@ -133,7 +134,7 @@ answer_hw6_3b <- function(answer = NULL){
     warning('Currently, you have not answered question 3b')
   }
 
-  grade_env_hw5$answer_3b <- answer
+  grade_env_hw6$answer_3b <- answer
 }
 
 
