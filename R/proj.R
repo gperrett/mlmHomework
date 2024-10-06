@@ -17,11 +17,11 @@ generate_data_proj <- function(netid){
   grade_env_proj$netid <- netid #handy for assignment of grades
   Sys.setenv(seed = id[netid])
   set.seed(as.numeric(Sys.getenv('seed')))
-  gid <<- gids[id[netid]]
-  feature <<- features[id[netid]]
-  housingDat <<- housing[[id[netid]]]
+  gid <<- gids[idGrouped[netid]]
+  feature <<- features[idGrouped[netid]]
+  housingDat <<- housing[[idGrouped[netid]]]
+  netid <<- netid #handy
 }
-
 
 
 #' @title submit answer to project question 1a
