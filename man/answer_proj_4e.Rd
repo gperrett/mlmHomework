@@ -7,7 +7,7 @@
 answer_proj_4e(answer = NULL)
 }
 \arguments{
-\item{answer}{a numeric answer. Do not worry about rounding but provide a minimum or 2 decimal places to all answers}
+\item{answer}{a vector of length 5}
 }
 \value{
 summary of your current answer for question 4e
@@ -18,10 +18,10 @@ submit answer to project question 4e
 \examples{
 \donttest{
 
-# format answer to question 1d:
-answer_proj_4e(answer = .2239)
+# format answer to question 4e:
 
-answer_proj_4e(answer = .5483)
+grid <- c(1.1, 2.2, 3.3, 4.4, 5.5) # should be length 5!
+answer_proj_4d(answer = grid)
 
 }
 

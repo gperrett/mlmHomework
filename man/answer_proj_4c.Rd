@@ -7,7 +7,7 @@
 answer_proj_4c(answer = NULL)
 }
 \arguments{
-\item{answer}{a numeric answer. Do not worry about rounding but provide a minimum or 2 decimal places to all answers}
+\item{answer}{a numeric answer, 1, 2 or 3.}
 }
 \value{
 summary of your current answer for question 4c
@@ -18,10 +18,10 @@ submit answer to project question 4c
 \examples{
 \donttest{
 
-# format answer to question 1d:
-answer_proj_4c(answer = .2239)
+# format answer to question 4c:
+answer_proj_4c(answer = 1)
 
-answer_proj_4c(answer = .5483)
+answer_proj_4c(answer = 2)
 
 }
 

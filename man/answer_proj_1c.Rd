@@ -7,7 +7,7 @@
 answer_proj_1c(answer = NULL)
 }
 \arguments{
-\item{answer}{a numeric answer. Do not worry about rounding but provide a minimum or 2 decimal places to all answers}
+\item{answer}{a character vector}
 }
 \value{
 summary of your current answer for question 1c
@@ -19,9 +19,8 @@ submit answer to project question 1c
 \donttest{
 
 # format answer to question 1d:
-answer_proj_1c(answer = .2239)
-
-answer_proj_1c(answer = .5483)
+pairNames <- c("xxx", "yyy") # should be length 2!
+answer_proj_1c(answer = pairNames)
 
 }
 

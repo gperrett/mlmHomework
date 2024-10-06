@@ -18,9 +18,9 @@ submit answer to project question 4 part d
 \examples{
 \donttest{
 
-# format answer to question 3a:
+# format answer to question 4d:
 
-grid <- c(1, 2, 3, 4, 5) # should be length 5!
+grid <- c(1.1, 2.2, 3.3, 4.4, 5.5) # should be length 5!
 answer_proj_4d(answer = grid)
 
 

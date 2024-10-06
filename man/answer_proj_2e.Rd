@@ -7,7 +7,7 @@
 answer_proj_2e(answer = NULL)
 }
 \arguments{
-\item{answer}{a numeric answer. Do not worry about rounding but provide a minimum or 2 decimal places to all answers}
+\item{answer}{a logical indicating TRUE or FALSE}
 }
 \value{
 summary of your current answer for question 2e
@@ -18,10 +18,10 @@ submit answer to project question 2e
 \examples{
 \donttest{
 
-# format answer to question 1d:
-answer_proj_2e(answer = .2239)
+# format answer to question 2e:
+answer_proj_2e(answer = TRUE) # to indicate true
 
-answer_proj_2e(answer = .5483)
+answer_proj_2e(answer = FALSE) # to indicate false
 
 }
 
