@@ -64,6 +64,30 @@ answer_proj_1a <- function(answer = NULL){
 }
 
 
+#' @title submit answer to project question 1b
+#' @param answer a numeric answer. Do not worry about rounding but provide a minimum or 2 decimal places to all answers
+#' @return summary of your current answer for question 1b
+#' @export
+#'
+#' @examples
+#' \donttest{
+#'
+#' # format answer to question 1d:
+#' answer_proj_1b(answer = .2239)
+#'
+#' answer_proj_1b(answer = .5483)
+#'
+#' }
+#'
+answer_proj_1b <- function(answer = NULL){
+  if(is.null(answer)){
+    answer <- NULL
+    warning('Currently, you have not answered question 1b')
+  }
+
+  grade_env_proj$answer_1b <- answer
+}
+
 
 
 #' @title submit answer to project question 1d
@@ -124,6 +148,6 @@ answer_proj_4d <- function(answer = NULL){
 
 #stubs
 
-answer_proj_1b <-  answer_proj_1c <-answer_proj_1e <-answer_proj_2a <-answer_proj_2b <-answer_proj_2c <-answer_proj_2d <- answer_proj_2e <- answer_proj_1a
+#answer_proj_1c <-answer_proj_1e <-answer_proj_2a <-answer_proj_2b <-answer_proj_2c <-answer_proj_2d <- answer_proj_2e <- answer_proj_1a
 
-answer_proj_3b <-  answer_proj_3c <-answer_proj_3d <-answer_proj_3e <-answer_proj_3a <-answer_proj_4a <-answer_proj_4b <- answer_proj_4c <- answer_proj_4e <- answer_proj_1a
+#answer_proj_3b <-  answer_proj_3c <-answer_proj_3d <-answer_proj_3e <-answer_proj_3a <-answer_proj_4a <-answer_proj_4b <- answer_proj_4c <- answer_proj_4e <- answer_proj_1a
