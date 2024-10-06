@@ -4,8 +4,8 @@ set.seed(1357)
 #Choose a/b/c/d for each group here
 groups <- rep(1:50,each=4) #up to 50 groups
 sels <- as.vector(replicate(50,sample(LETTERS[1:4])))
-features <- ifelse(sels %in% c("A","C"),"age","size")
-gids <- ifelse(sels %in% c("A","B"),"ZIP","nhood")
+features <<- ifelse(sels %in% c("A","C"),"age","size")
+gids <<- ifelse(sels %in% c("A","B"),"ZIP","nhood")
 
 #' @title Load data for project
 #' @param netid a character string representing your NYU netid. Make sure to only use your netID!!
@@ -24,7 +24,7 @@ gids <- ifelse(sels %in% c("A","B"),"ZIP","nhood")
 generate_data_proj <- function(netid){
   #id is already available in globalEnv (need to adjust for groups)
   grade_env_proj$netid <- netid #handy for assignment of grades
-  names(drawproj) <- names(id) #needs drawproj to exist
+  names(housing) <- names(id) #needs housing to exist in data dir.
   Sys.setenv(seed = id[netid])
   set.seed(as.numeric(Sys.getenv('seed')))
   gid <<- gids[id[netid]]
