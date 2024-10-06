@@ -19,7 +19,7 @@ generate_data_proj <- function(netid){
   set.seed(as.numeric(Sys.getenv('seed')))
   gid <<- gids[id[netid]]
   feature <<- features[id[netid]]
-  housing <<- housing[[id[netid]]]
+  housingDat <<- housing[[id[netid]]]
 }
 
 
