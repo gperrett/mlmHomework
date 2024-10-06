@@ -1,12 +1,3 @@
-#' @title Load core objects for proj management of groups/assignments
-#'
-set.seed(1357)
-#Choose a/b/c/d for each group here
-groups <- rep(1:50,each=4) #up to 50 groups
-sels <- as.vector(replicate(50,sample(LETTERS[1:4])))
-features <<- ifelse(sels %in% c("A","C"),"age","size")
-gids <<- ifelse(sels %in% c("A","B"),"ZIP","nhood")
-
 #' @title Load data for project
 #' @param netid a character string representing your NYU netid. Make sure to only use your netID!!
 #' @return the `housing` data.frame
