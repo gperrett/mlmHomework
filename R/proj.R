@@ -15,10 +15,10 @@
 generate_data_proj <- function(netid){
   #id is already available in globalEnv (need to adjust for groups)
   grade_env_proj$netid <- netid #handy for assignment of grades
-# names(drawproj) <- names(id) #needs drawproj to exist
-Sys.setenv(seed = id[netid])
-set.seed(as.numeric(Sys.getenv('seed')))
-# housing <<- drawproj[[netid]]
+  names(drawproj) <- names(id) #needs drawproj to exist
+  Sys.setenv(seed = id[netid])
+  set.seed(as.numeric(Sys.getenv('seed')))
+  housing <<- drawproj[[netid]]
 }
 
 
