@@ -18,7 +18,7 @@ submit answer to project question 2d
 \examples{
 \donttest{
 
-# format answer to question 1d:
+# format answer to question 2d:
 answer_proj_2d(answer = .2239)
 
 answer_proj_2d(answer = .5483)

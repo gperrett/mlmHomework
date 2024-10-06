@@ -55,31 +55,36 @@ answer_proj_1a <- function(answer = NULL){
 
 
 #' @title submit answer to project question 1b
-#' @param answer a numeric answer. Do not worry about rounding but provide a minimum or 2 decimal places to all answers
+#' @param answer a logical indicating TRUE or FALSE
 #' @return summary of your current answer for question 1b
 #' @export
 #'
 #' @examples
 #' \donttest{
 #'
-#' # format answer to question 1d:
-#' answer_proj_1b(answer = .2239)
+#' # format answer to question 1b:
+#' answer_proj_1a(answer = TRUE) # to indicate true
 #'
-#' answer_proj_1b(answer = .5483)
+#' answer_proj_1a(answer = FALSE) # to indicate false
 #'
 #' }
 #'
 answer_proj_1b <- function(answer = NULL){
+
   if(is.null(answer)){
     answer <- NULL
     warning('Currently, you have not answered question 1b')
   }
 
+  if(is.character(answer)){
+    answer <- as.logical(answer)
+  }
+  
   grade_env_proj$answer_1b <- answer
 }
 
 #' @title submit answer to project question 1c
-#' @param answer a numeric answer. Do not worry about rounding but provide a minimum or 2 decimal places to all answers
+#' @param answer a character vector
 #' @return summary of your current answer for question 1c
 #' @export
 #'
@@ -87,13 +92,16 @@ answer_proj_1b <- function(answer = NULL){
 #' \donttest{
 #'
 #' # format answer to question 1d:
-#' answer_proj_1c(answer = .2239)
-#'
-#' answer_proj_1c(answer = .5483)
+#' pairNames <- c("xxx", "yyy") # should be length 2!
+#' answer_proj_1c(answer = pairNames)
 #'
 #' }
 #'
 answer_proj_1c <- function(answer = NULL){
+   
+  if(isFALSE(is.vector(answer))||length(answer)!=2){
+     stop('your answer is not a vector of length 2. This question will only take a character vector')
+  }
   if(is.null(answer)){
     answer <- NULL
     warning('Currently, you have not answered question 1c')
@@ -104,7 +112,7 @@ answer_proj_1c <- function(answer = NULL){
 
 
 #' @title submit answer to project question 1d
-#' @param answer a numeric answer. Do not worry about rounding but provide a minimum or 2 decimal places to all answers
+#' @param answer a numeric answer, an integer from (1,2,3,4,5)
 #' @return summary of your current answer for question 1d
 #' @export
 #'
@@ -112,9 +120,9 @@ answer_proj_1c <- function(answer = NULL){
 #' \donttest{
 #'
 #' # format answer to question 1d:
-#' answer_proj_1d(answer = .2239)
+#' answer_proj_1d(answer = 1)
 #'
-#' answer_proj_1d(answer = .5483)
+#' answer_proj_1d(answer = 2)
 #'
 #' }
 #'
@@ -127,42 +135,18 @@ answer_proj_1d <- function(answer = NULL){
   grade_env_proj$answer_1d <- answer
 }
 
-#' @title submit answer to project question 1e
-#' @param answer a numeric answer. Do not worry about rounding but provide a minimum or 2 decimal places to all answers
-#' @return summary of your current answer for question 1e
-#' @export
-#'
-#' @examples
-#' \donttest{
-#'
-#' # format answer to question 1d:
-#' answer_proj_1e(answer = .2239)
-#'
-#' answer_proj_1e(answer = .5483)
-#'
-#' }
-#'
-answer_proj_1e <- function(answer = NULL){
-  if(is.null(answer)){
-    answer <- NULL
-    warning('Currently, you have not answered question 1e')
-  }
-
-  grade_env_proj$answer_1e <- answer
-}
-
 #' @title submit answer to project question 2a
-#' @param answer a numeric answer. Do not worry about rounding but provide a minimum or 2 decimal places to all answers
+#' @param answer a numeric answer, an integer from (1,2,3)
 #' @return summary of your current answer for question 2a
 #' @export
 #'
 #' @examples
 #' \donttest{
 #'
-#' # format answer to question 1d:
-#' answer_proj_2a(answer = .2239)
+#' # format answer to question 2a:
+#' answer_proj_2a(answer = 1)
 #'
-#' answer_proj_2a(answer = .5483)
+#' answer_proj_2a(answer = 2)
 #'
 #' }
 #'
@@ -183,7 +167,7 @@ answer_proj_2a <- function(answer = NULL){
 #' @examples
 #' \donttest{
 #'
-#' # format answer to question 1d:
+#' # format answer to question 2b:
 #' answer_proj_2b(answer = .2239)
 #'
 #' answer_proj_2b(answer = .5483)
@@ -207,7 +191,7 @@ answer_proj_2b <- function(answer = NULL){
 #' @examples
 #' \donttest{
 #'
-#' # format answer to question 1d:
+#' # format answer to question 2c:
 #' answer_proj_2c(answer = .2239)
 #'
 #' answer_proj_2c(answer = .5483)
@@ -232,7 +216,7 @@ answer_proj_2c <- function(answer = NULL){
 #' @examples
 #' \donttest{
 #'
-#' # format answer to question 1d:
+#' # format answer to question 2d:
 #' answer_proj_2d(answer = .2239)
 #'
 #' answer_proj_2d(answer = .5483)
@@ -248,18 +232,19 @@ answer_proj_2d <- function(answer = NULL){
   grade_env_proj$answer_2d <- answer
 }
 
+
 #' @title submit answer to project question 2e
-#' @param answer a numeric answer. Do not worry about rounding but provide a minimum or 2 decimal places to all answers
+#' @param answer a logical indicating TRUE or FALSE
 #' @return summary of your current answer for question 2e
 #' @export
 #'
 #' @examples
 #' \donttest{
 #'
-#' # format answer to question 1d:
-#' answer_proj_2e(answer = .2239)
+#' # format answer to question 2e:
+#' answer_proj_2e(answer = TRUE) # to indicate true
 #'
-#' answer_proj_2e(answer = .5483)
+#' answer_proj_2e(answer = FALSE) # to indicate false
 #'
 #' }
 #'
@@ -268,22 +253,26 @@ answer_proj_2e <- function(answer = NULL){
     answer <- NULL
     warning('Currently, you have not answered question 2e')
   }
+  
+  if(is.character(answer)){
+    answer <- as.logical(answer)
+  }
 
   grade_env_proj$answer_2e <- answer
 }
 
 #' @title submit answer to project question 3a
-#' @param answer a numeric answer. Do not worry about rounding but provide a minimum or 2 decimal places to all answers
+#' @param answer a numeric answer, an intergerfrom (1,2,3)
 #' @return summary of your current answer for question 3a
 #' @export
 #'
 #' @examples
 #' \donttest{
 #'
-#' # format answer to question 1d:
-#' answer_proj_3a(answer = .2239)
+#' # format answer to question 3a:
+#' answer_proj_3a(answer = 1)
 #'
-#' answer_proj_3a(answer = .5483)
+#' answer_proj_3a(answer = 2)
 #'
 #' }
 #'
@@ -297,17 +286,17 @@ answer_proj_3a <- function(answer = NULL){
 }
 
 #' @title submit answer to project question 3b
-#' @param answer a numeric answer. Do not worry about rounding but provide a minimum or 2 decimal places to all answers
+#' @param answer a logical indicating TRUE or FALSE
 #' @return summary of your current answer for question 3b
 #' @export
 #'
 #' @examples
 #' \donttest{
 #'
-#' # format answer to question 1d:
-#' answer_proj_3b(answer = .2239)
+#' # format answer to question 3b:
+#' answer_proj_3b(answer = TRUE) # to indicate true
 #'
-#' answer_proj_3b(answer = .5483)
+#' answer_proj_3b(answer = FALSE) # to indicate false
 #'
 #' }
 #'
@@ -317,6 +306,10 @@ answer_proj_3b <- function(answer = NULL){
     warning('Currently, you have not answered question 3b')
   }
 
+  if(is.character(answer)){
+    answer <- as.logical(answer)
+  }
+  
   grade_env_proj$answer_3b <- answer
 }
 
@@ -328,7 +321,7 @@ answer_proj_3b <- function(answer = NULL){
 #' @examples
 #' \donttest{
 #'
-#' # format answer to question 1d:
+#' # format answer to question 3c:
 #' answer_proj_3c(answer = .2239)
 #'
 #' answer_proj_3c(answer = .5483)
@@ -345,17 +338,17 @@ answer_proj_3c <- function(answer = NULL){
 }
 
 #' @title submit answer to project question 3d
-#' @param answer a numeric answer. Do not worry about rounding but provide a minimum or 2 decimal places to all answers
+#' @param answer a logical indicating TRUE or FALSE
 #' @return summary of your current answer for question 3d
 #' @export
 #'
 #' @examples
 #' \donttest{
 #'
-#' # format answer to question 1d:
-#' answer_proj_3d(answer = .2239)
+#' # format answer to question 3d:
+#' answer_proj_3d(answer = TRUE) # to indicate true
 #'
-#' answer_proj_3d(answer = .5483)
+#' answer_proj_3d(answer = FALSE) # to indicate false
 #'
 #' }
 #'
@@ -363,6 +356,10 @@ answer_proj_3d <- function(answer = NULL){
   if(is.null(answer)){
     answer <- NULL
     warning('Currently, you have not answered question 3d')
+  }
+  
+  if(is.character(answer)){
+    answer <- as.logical(answer)
   }
 
   grade_env_proj$answer_3d <- answer
@@ -376,7 +373,7 @@ answer_proj_3d <- function(answer = NULL){
 #' @examples
 #' \donttest{
 #'
-#' # format answer to question 1d:
+#' # format answer to question 3e:
 #' answer_proj_3e(answer = .2239)
 #'
 #' answer_proj_3e(answer = .5483)
@@ -400,7 +397,7 @@ answer_proj_3e <- function(answer = NULL){
 #' @examples
 #' \donttest{
 #'
-#' # format answer to question 1d:
+#' # format answer to question 4a:
 #' answer_proj_4a(answer = .2239)
 #'
 #' answer_proj_4a(answer = .5483)
@@ -417,17 +414,17 @@ answer_proj_4a <- function(answer = NULL){
 }
 
 #' @title submit answer to project question 4b
-#' @param answer a numeric answer. Do not worry about rounding but provide a minimum or 2 decimal places to all answers
+#' @param answer a logical indicating TRUE or FALSE
 #' @return summary of your current answer for question 4b
 #' @export
 #'
 #' @examples
 #' \donttest{
 #'
-#' # format answer to question 1d:
-#' answer_proj_4b(answer = .2239)
+#' # format answer to question 4b:
+#' answer_proj_4b(answer = TRUE) # to indicate true
 #'
-#' answer_proj_4b(answer = .5483)
+#' answer_proj_4b(answer = FALSE) # to indicate false
 #'
 #' }
 #'
@@ -437,21 +434,25 @@ answer_proj_4b <- function(answer = NULL){
     warning('Currently, you have not answered question 4b')
   }
 
+  if(is.character(answer)){
+    answer <- as.logical(answer)
+  }
+
   grade_env_proj$answer_4b <- answer
 }
 
 #' @title submit answer to project question 4c
-#' @param answer a numeric answer. Do not worry about rounding but provide a minimum or 2 decimal places to all answers
+#' @param answer a numeric answer, 1, 2 or 3.
 #' @return summary of your current answer for question 4c
 #' @export
 #'
 #' @examples
 #' \donttest{
 #'
-#' # format answer to question 1d:
-#' answer_proj_4c(answer = .2239)
+#' # format answer to question 4c:
+#' answer_proj_4c(answer = 1)
 #'
-#' answer_proj_4c(answer = .5483)
+#' answer_proj_4c(answer = 2)
 #'
 #' }
 #'
@@ -473,9 +474,9 @@ answer_proj_4c <- function(answer = NULL){
 #' @examples
 #' \donttest{
 #'
-#' # format answer to question 3a:
+#' # format answer to question 4d:
 #'
-#' grid <- c(1, 2, 3, 4, 5) # should be length 5!
+#' grid <- c(1.1, 2.2, 3.3, 4.4, 5.5) # should be length 5!
 #' answer_proj_4d(answer = grid)
 #'
 #'
@@ -483,8 +484,8 @@ answer_proj_4c <- function(answer = NULL){
 #'
 answer_proj_4d <- function(answer = NULL){
 
-  if(isFALSE(is.vector(answer))){
-    stop('your answer is not a vector. This question will only take a vector')
+  if(isFALSE(is.vector(answer))||length(answer)!=5){
+    stop('your answer is not a vector. This question will only take a vector of length 5')
   }
 
   if(is.null(answer)){
@@ -497,21 +498,26 @@ answer_proj_4d <- function(answer = NULL){
 
 
 #' @title submit answer to project question 4e
-#' @param answer a numeric answer. Do not worry about rounding but provide a minimum or 2 decimal places to all answers
+#' @param answer a vector of length 5
 #' @return summary of your current answer for question 4e
 #' @export
 #'
 #' @examples
 #' \donttest{
 #'
-#' # format answer to question 1d:
-#' answer_proj_4e(answer = .2239)
+#' # format answer to question 4e:
 #'
-#' answer_proj_4e(answer = .5483)
+#' grid <- c(1.1, 2.2, 3.3, 4.4, 5.5) # should be length 5!
+#' answer_proj_4d(answer = grid)
 #'
 #' }
 #'
 answer_proj_4e <- function(answer = NULL){
+    
+  if(isFALSE(is.vector(answer))||length(answer)!=5){
+      stop('your answer is not a vector. This question will only take a vector of length 5')
+  }
+  
   if(is.null(answer)){
     answer <- NULL
     warning('Currently, you have not answered question 4e')
