@@ -15,7 +15,6 @@
 generate_data_proj <- function(netid){
   #id is already available in globalEnv (need to adjust for groups)
   grade_env_proj$netid <- netid #handy for assignment of grades
-  names(housing) <- names(id) #needs housing to exist in data dir.
   Sys.setenv(seed = id[netid])
   set.seed(as.numeric(Sys.getenv('seed')))
   gid <<- gids[id[netid]]
