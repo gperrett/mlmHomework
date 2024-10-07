@@ -21,6 +21,7 @@ generate_data_proj <- function(netid){
   feature <<- features[idGrouped[netid]]
   housingDat <<- housing[[idGrouped[netid]]]
   netid <<- netid #handy
+  groupNum <<- idGrouped[netid] #group number
 }
 
 
