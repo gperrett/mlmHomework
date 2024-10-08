@@ -19,9 +19,9 @@ generate_data_proj <- function(netid){
   set.seed(as.numeric(Sys.getenv('seed')))
   gid <<- gids[idGrouped[netid]]
   feature <<- features[idGrouped[netid]]
-  housingDat <<- housing[[idGrouped[netid]]]
+  housingDat <<- housing[[groups[idGrouped[netid]]]]
   netid <<- netid #handy
-  groupNum <<- idGrouped[netid] #group number
+  groupNum <<- idGrouped[netid] #groups[groupNum] is group number (I know it is bizzare, but fewer changes this way)
 }
 
 
