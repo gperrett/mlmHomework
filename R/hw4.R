@@ -15,9 +15,9 @@
 generate_data_hw4 <- function(netid){
   grade_env_hw4$netid <- netid
   #draw <- readRDS('data/draw.rds')
-  #id is already available in globalEnv 
-  names(draw) <- names(id)
-  Sys.setenv(seed = id[netid])
+  #USERid is already available in globalEnv
+  names(draw) <- names(USERid)
+  Sys.setenv(seed = USERid[netid])
   set.seed(as.numeric(Sys.getenv('seed')))
   N <- sample(80:100, 1) # schools
   M <- sample(85:110, 1) # students per school
