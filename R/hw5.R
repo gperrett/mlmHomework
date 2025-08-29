@@ -15,7 +15,7 @@
 generate_data_hw5 <- function(netid){
   #draw <- readRDS('data/draw.rds')
   #USERid is already available in globalEnv
-  names(draw) <- names(USERid)
+  names(draw5) <- names(USERid)
   Sys.setenv(seed = USERid[netid])
   grade_env_hw5$netid <- netid #handy for assignment of grades
   #wagepan
