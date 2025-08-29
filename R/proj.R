@@ -13,9 +13,9 @@
 #' }
 #'
 generate_data_proj <- function(netid){
-  #id is already available in globalEnv (need to adjust for groups)
+  #USERid is already available in globalEnv (need to adjust for groups)
   grade_env_proj$netid <- netid #handy for assignment of grades
-  Sys.setenv(seed = id[netid])
+  Sys.setenv(seed = USERid[netid])
   set.seed(as.numeric(Sys.getenv('seed')))
   gid <<- gids[idGrouped[netid]]
   feature <<- features[idGrouped[netid]]
