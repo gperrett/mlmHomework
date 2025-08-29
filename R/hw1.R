@@ -14,9 +14,9 @@
 #'
 generate_data_hw1 <- function(netid){
   #draw <- readRDS('data/draw.rds')
-  #id in the gloabl Env.
-  names(draw) <- names(id)
-  Sys.setenv(seed = id[netid])
+  #USERid in the gloabl Env.
+  names(draw) <- names(USERid)
+  Sys.setenv(seed = USERid[netid])
   set.seed(as.numeric(Sys.getenv('seed')))
   schools <<- draw[[netid]]
 
