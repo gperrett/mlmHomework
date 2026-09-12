@@ -13,6 +13,7 @@
 #' }
 #'
 generate_data_hw3 <- function(netid){
+  grade_env_hw3$netid <- netid
   #draw <- readRDS('data/draw.rds')
   #USERid is already available in globalEnv
   names(draw) <- names(USERid)
