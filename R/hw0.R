@@ -1,7 +1,7 @@
 #' @title Load names for all generate data functions
 #' 
 
-nEnrolled <- 32
+nEnrolled <- 30
 nMax <- 200
 id <- 1:nMax
 skip <- 7
