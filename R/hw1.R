@@ -13,6 +13,7 @@
 #' }
 #'
 generate_data_hw1 <- function(netid){
+  grade_env_hw1$netid <- netid
   #draw <- readRDS('data/draw.rds')
   #USERid in the gloabl Env.
   names(draw) <- names(USERid)
