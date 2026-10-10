@@ -18,7 +18,6 @@ names(idGrouped)[(4*skip+1):(4*skip+nEnrolled)] <- c(
   'yf2938', 'yw9300', #D: SocW
   'tfs6492', 'jl13491', #M A3SR
   'mk8428', 'ys6951', #D: Epi
-  'arr426','yl6594', #D: Dev
   'jm12169', 'dh3445', #M A3SR
   'ag11882', 'njp9611', #D: CSS
   'nt1511', 'tlk8908',  #M: epi
